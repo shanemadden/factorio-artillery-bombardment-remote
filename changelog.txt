@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 28. 5. 2018
+  Changes:
+    - Add smart bombardment remote with a separate (extremely expensive) technology, which will target all biter structures in the selected area.
+---------------------------------------------------------------------------------------------------
 Version: 0.16.1
 Date: 28. 5. 2018
   Changes:

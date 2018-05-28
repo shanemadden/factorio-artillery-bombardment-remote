@@ -27,12 +27,59 @@ local function on_player_selected_area(event)
         break
       end
     end
+  elseif event.item == "smart-artillery-bombardment-remote" then
+    local surface = game.players[event.player_index].surface
+    local force = game.players[event.player_index].force
+    local count = 0
+    local spawners = surface.find_entities_filtered({
+      area = event.area,
+      force = "enemy",
+      type = "unit-spawner",
+    })
+    for _, entity in ipairs(spawners) do
+      surface.create_entity({
+        name = "artillery-flare",
+        position = entity.position,
+        force = force,
+        movement = {0, 0},
+        height = 0,
+        vertical_speed = 0,
+        frame_speed = 0,
+      })
+      count = count + 1
+      if count > target_limit then
+        break
+      end
+    end
+    local turrets = surface.find_entities_filtered({
+      area = event.area,
+      force = "enemy",
+      type = "turret",
+    })
+    for _, entity in ipairs(turrets) do
+      surface.create_entity({
+        name = "artillery-flare",
+        position = entity.position,
+        force = force,
+        movement = {0, 0},
+        height = 0,
+        vertical_speed = 0,
+        frame_speed = 0,
+      })
+      count = count + 1
+      if count > target_limit then
+        break
+      end
+    end
+    if count > target_limit then
+      game.players[event.player_index].print({"artillery-bombardment-remote.shot_limit_reached", target_limit})
+    end
   end
 end
 script.on_event(defines.events.on_player_selected_area, on_player_selected_area)
 
 local function on_player_alt_selected_area(event)
-  if event.item == "artillery-bombardment-remote" then
+  if event.item == "artillery-bombardment-remote" or event.item == "smart-artillery-bombardment-remote" then
     local flares = game.players[event.player_index].surface.find_entities_filtered({
       area = event.area,
       name = "artillery-flare",
