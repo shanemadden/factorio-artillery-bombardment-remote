@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 28. 5. 2018
+  Changes:
+    - Fix offsetting the first column, allowing a click or very small selection to fire a single shot.
+    - Change casing in localized names to match the game's conventions
+---------------------------------------------------------------------------------------------------
 Version: 0.16.0
 Date: 28. 5. 2018
   Info:

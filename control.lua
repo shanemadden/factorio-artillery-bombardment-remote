@@ -6,7 +6,6 @@ local function on_player_selected_area(event)
     local count = 0
     local col_count = 0
     for x = event.area.left_top.x, event.area.right_bottom.x, 6 do
-      col_count = col_count + 1
       for y = (event.area.left_top.y + (2 * (col_count % 2))), event.area.right_bottom.y, 4 do
         surface.create_entity({
           name = "artillery-flare",
@@ -22,6 +21,7 @@ local function on_player_selected_area(event)
           break
         end
       end
+      col_count = col_count + 1
       if count > target_limit then
         game.players[event.player_index].print({"artillery-bombardment-remote.shot_limit_reached", target_limit})
         break
