@@ -84,6 +84,10 @@ script.on_event(defines.events.on_player_selected_area, on_player_selected_area)
 
 local function on_player_alt_selected_area(event)
   if event.item == "artillery-bombardment-remote" or event.item == "smart-artillery-bombardment-remote" then
+    if event.area.left_top.x == event.area.right_bottom.x or
+      event.area.left_top.y == event.area.right_bottom.y then
+      return
+    end
     local flares = game.players[event.player_index].surface.find_entities_filtered({
       area = event.area,
       name = "artillery-flare",
