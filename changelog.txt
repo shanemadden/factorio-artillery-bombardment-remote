@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.5
+Date: 29. 5. 2018
+  Changes:
+    - Added Russian translation courtesy of nucleargen on GitHub
+    - Changed smart remote's targeting to no longer hit biters in unexplored chunks, since that behavior feels too powerful. (still targets those biters if the player has enabled cheat mode)
+---------------------------------------------------------------------------------------------------
 Version: 0.16.4
 Date: 29. 5. 2018
   Bugfixes:
