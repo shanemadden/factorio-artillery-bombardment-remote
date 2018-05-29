@@ -31,6 +31,10 @@ local function on_player_selected_area(event)
     local surface = game.players[event.player_index].surface
     local force = game.players[event.player_index].force
     local count = 0
+    if event.area.left_top.x == event.area.right_bottom.x or
+      event.area.left_top.y == event.area.right_bottom.y then
+      return
+    end
     local spawners = surface.find_entities_filtered({
       area = event.area,
       force = "enemy",
