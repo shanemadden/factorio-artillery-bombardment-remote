@@ -18,6 +18,7 @@ local item = {
   alt_selection_mode = { "matches-force" },
   selection_cursor_box_type = "entity",
   alt_selection_cursor_box_type = "entity",
+  can_be_mod_opened = true,
 }
 
 local smart_item = {
@@ -40,6 +41,7 @@ local smart_item = {
   alt_selection_mode = { "matches-force" },
   selection_cursor_box_type = "entity",
   alt_selection_cursor_box_type = "entity",
+  can_be_mod_opened = true,
 }
 
 local recipe = {

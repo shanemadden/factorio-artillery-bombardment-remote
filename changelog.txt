@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.7
+Date: 13. 9. 2018
+  Changes:
+    - Added right-click options for tuning the spacing of shots with standard bombardment remote, and for avoiding creating shots within a specified radius for the smart remote
+---------------------------------------------------------------------------------------------------
 Version: 0.16.6
 Date: 29. 5. 2018
   Bugfixes:
