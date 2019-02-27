@@ -5,6 +5,5 @@ workflow "New workflow" {
 
 action "shanemadden/factorio-mod-portal-publish@master" {
   uses = "shanemadden/factorio-mod-portal-publish@master"
-  secrets = ["FACTORIO_PASSWORD", "FACTORIO_USER"]
-  args = "artillery-bombardment-remote"
+  secrets = ["FACTORIO_USER", "FACTORIO_PASSWORD"]
 }
