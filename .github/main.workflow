@@ -1,3 +1,1 @@
-workflow "Publish" {
-  on = "push"
-}
+
