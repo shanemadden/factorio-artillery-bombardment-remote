@@ -1,49 +1,54 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 13. 04. 2019
+  Changes:
+    - Smart remote targets a single shot on each unexplored chunk to assist in exploring
+---------------------------------------------------------------------------------------------------
 Version: 0.17.0
-Date: 26. 2. 2019
+Date: 26. 02. 2019
   Changes:
     - Updated for 0.17
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.7
-Date: 13. 9. 2018
+Date: 13. 09. 2018
   Changes:
     - Added right-click options for tuning the spacing of shots with standard bombardment remote, and for avoiding creating shots within a specified radius for the smart remote
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.6
-Date: 29. 5. 2018
+Date: 29. 05. 2018
   Bugfixes:
     - Change encoding on Russian translation file to fix loading issue
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.5
-Date: 29. 5. 2018
+Date: 29. 05. 2018
   Changes:
     - Added Russian translation courtesy of nucleargen on GitHub
     - Changed smart remote's targeting to no longer hit biters in unexplored chunks, since that behavior feels too powerful. (still targets those biters if the player has enabled cheat mode)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.4
-Date: 29. 5. 2018
+Date: 29. 05. 2018
   Bugfixes:
     - Fix the same small area selection crash when shift-clicking either tool
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.3
-Date: 29. 5. 2018
+Date: 29. 05. 2018
   Info:
     - Add descriptions to help clarify the use of each item
   Bugfixes:
     - Fix crash when selecting a small area with the smart remote
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.2
-Date: 28. 5. 2018
+Date: 28. 05. 2018
   Changes:
     - Add smart bombardment remote with a separate (extremely expensive) technology, which will target all biter structures in the selected area.
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.1
-Date: 28. 5. 2018
+Date: 28. 05. 2018
   Changes:
     - Fix offsetting the first column, allowing a click or very small selection to fire a single shot.
     - Change casing in localized names to match the game's conventions
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.0
-Date: 28. 5. 2018
+Date: 28. 05. 2018
   Info:
     - Initial release

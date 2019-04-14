@@ -51,6 +51,25 @@ local function on_player_selected_area(event)
       event.area.left_top.y == event.area.right_bottom.y then
       return
     end
+
+    local left_top_chunk = position_to_chunk(event.area.left_top)
+    local right_bottom_chunk = position_to_chunk(event.area.right_bottom)
+    for x = left_top_chunk.x, right_bottom_chunk.x do
+      for y = left_top_chunk.y, right_bottom_chunk.y do
+        if not force.is_chunk_charted(surface, {x, y}) then
+          surface.create_entity({
+            name = "artillery-flare",
+            position = {(x*32) + 16, (y*32) + 16},
+            force = force,
+            movement = {0, 0},
+            height = 0,
+            vertical_speed = 0,
+            frame_speed = 0,
+          })
+        end
+      end
+    end
+
     local spawners = surface.find_entities_filtered({
       area = event.area,
       force = "enemy",
