@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 01. 05. 2019
+  Changes:
+    - Exploration shot target should occur after targeting biters, causing cannons to prefer targeting enemies before fog of war.
+---------------------------------------------------------------------------------------------------
 Version: 0.17.1
 Date: 13. 04. 2019
   Changes:
