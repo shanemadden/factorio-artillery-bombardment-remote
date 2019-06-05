@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 05. 06. 2019
+  Changes:
+    - Adds new exploration remote, which will target exploration artillery at the maximum possible range when selecting an artillery turret or wagon - thanks to EnigmaticAussie for the concept and implementation of this feature!
+---------------------------------------------------------------------------------------------------
 Version: 0.17.2
 Date: 01. 05. 2019
   Changes:
