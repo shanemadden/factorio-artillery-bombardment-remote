@@ -86,57 +86,16 @@ local function on_player_selected_area(event)
         if event.area.left_top.x == event.area.right_bottom.x or event.area.left_top.y == event.area.right_bottom.y then
             return
         end
-        -- Find spawners in selection area, mark with flare
-        local spawners =
+        -- Find enemy military structures in selection area, mark with flare
+        local military_structures =
             surface.find_entities_filtered(
             {
                 area = event.area,
                 force = 'enemy',
-                type = 'unit-spawner'
+                type = {'unit-spawner', 'turret', 'simple-entity-with-force', 'radar', 'player-port'}
             }
         )
-        for _, entity in ipairs(spawners) do
-            if game.players[event.player_index].cheat_mode or force.is_chunk_charted(surface, position_to_chunk(entity.position)) then
-                local skip = false
-                local entity_position = entity.position
-                for _, position in ipairs(points_hit) do
-                    local x_dist = math.abs(entity_position.x - position.x)
-                    local y_dist = math.abs(entity_position.y - position.y)
-                    if math.sqrt(x_dist * x_dist + y_dist * y_dist) < (settings.radius or 6) then
-                        skip = true
-                        break
-                    end
-                end
-                if not skip then
-                    surface.create_entity(
-                        {
-                            name = 'artillery-flare',
-                            position = entity_position,
-                            force = force,
-                            movement = {0, 0},
-                            height = 0,
-                            vertical_speed = 0,
-                            frame_speed = 0
-                        }
-                    )
-                    table.insert(points_hit, entity.position)
-                    count = count + 1
-                    if count > target_limit then
-                        break
-                    end
-                end
-            end
-        end
-        -- Find worms in selection area, mark with flare
-        local turrets =
-            surface.find_entities_filtered(
-            {
-                area = event.area,
-                force = 'enemy',
-                type = 'turret'
-            }
-        )
-        for _, entity in ipairs(turrets) do
+        for _, entity in ipairs(military_structures) do
             if game.players[event.player_index].cheat_mode or force.is_chunk_charted(surface, position_to_chunk(entity.position)) then
                 local skip = false
                 local entity_position = entity.position
