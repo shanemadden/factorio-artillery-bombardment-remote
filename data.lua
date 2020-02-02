@@ -9,7 +9,7 @@ local item = {
       icon_size = 32,
     }
   },
-  flags = {},
+  flags = { "mod-openable" },
   stack_size = 1,
   stackable = false,
   selection_color = { r = 1, g = 0.28, b = 0, a = 1 },
@@ -18,7 +18,6 @@ local item = {
   alt_selection_mode = { "enemy" },
   selection_cursor_box_type = "entity",
   alt_selection_cursor_box_type = "entity",
-  can_be_mod_opened = true,
 }
 
 local smart_item = {
@@ -32,7 +31,7 @@ local smart_item = {
       icon_size = 32,
     }
   },
-  flags = {},
+  flags = { "mod-openable" },
   stack_size = 1,
   stackable = false,
   selection_color = { r = 1, g = 0.28, b = 0, a = 1 },
@@ -41,7 +40,6 @@ local smart_item = {
   alt_selection_mode = { "enemy" },
   selection_cursor_box_type = "entity",
   alt_selection_cursor_box_type = "entity",
-  can_be_mod_opened = true,
 }
 
 
